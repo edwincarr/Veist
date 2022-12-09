@@ -17,8 +17,8 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
-app.use('/api/user', userRouter)
-app.use('/api/text', textRouter)
+app.use('/api/users', userRouter)
+app.use('/api/texts', textRouter)
 
 app.use(errorHandler)
 

@@ -3,12 +3,12 @@ import mongooseUniqueValidator from "mongoose-unique-validator";
 const Schema = mongoose.Schema
 
 const userSchema = Schema({
-  userName: {
+  username: {
     type: String,
     lowercase: true,
     required: [true, 'Please Enter a Username'],
     match: [/^[a-zA-Z0-9]+$/, 'is invalid'],
-    unique
+    unique: true
   },
   email: {
     type: String,
