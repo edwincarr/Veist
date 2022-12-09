@@ -1,12 +1,15 @@
 import express from 'express'
 import dotenv from 'dotenv'
+dotenv.config()
 
 import userRouter from './routes/userRoute.js'
 
+import connectDB from './config/db.js'
 import errorHandler from './utils/errorHandler.js'
 
-dotenv.config()
 const port = process.env.PORT || 5000
+
+connectDB()
 
 const app = express()
 
