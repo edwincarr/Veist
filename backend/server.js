@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 import userRouter from './routes/userRoute.js'
+import textRouter from './routes/textRoute.js'
 
 import connectDB from './config/db.js'
 import errorHandler from './utils/errorHandler.js'
@@ -17,6 +18,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.use('/api/user', userRouter)
+app.use('/api/text', textRouter)
 
 app.use(errorHandler)
 
