@@ -7,10 +7,10 @@ const textSchema = Schema({
     required: true,
     ref: 'User'
   },
-  chatId: {
+  chat: {
     type: Schema.Types.ObjectId,
     required: true,
-    ref: 'ChatId'
+    ref: 'Chat'
   },
   message: {
     type: String,
@@ -22,7 +22,7 @@ const textSchema = Schema({
     },
     seen: Boolean
   }],
-  messageNumber: Number
+  messageNumber: Number,
 }, {
   timestamps: true
 })

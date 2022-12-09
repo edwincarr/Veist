@@ -6,7 +6,7 @@ import { postText, getText } from '../controllers/textController.js'
 
 const textRouter = express.Router()
 
-textRouter.post('/', protect, getText)
-textRouter.post('/', protect, postText)
+textRouter.get('/', protect, getText)
+textRouter.post('/', postText)
 
 export default textRouter
