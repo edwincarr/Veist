@@ -16,4 +16,4 @@ const getText = asyncHandler(async (req, res) => {
   res.json({message: 'Message Received'})
 })
 
-export { getText, postText};
+export { getText, postText };

@@ -10,6 +10,10 @@ const userSchema = Schema({
     match: [/^[a-zA-Z0-9]+$/, 'is invalid'],
     unique: true
   },
+  name: {
+    type: String,
+    required: [true, 'Please Enter a name'],
+  },
   email: {
     type: String,
     lowercase: true,
